@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+    margin: 0;
+}
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+input,
+button,
+select,
+textarea {
+    font: inherit;
+}
+img,
+picture {
+    display: block;
+    max-width: 100%;
+}
+/* remove animation for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DADADA;
+    position: relative;
+}
+
+.wapper {
+    height: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.wapper__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.25s;
+}
+
+.wapper__img:hover {
+    transform: scale(1.2);
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.8);
+    transition: 0.4s;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal.active {
+    transform: scale(1);
+    visibility: visible;
+    opacity: 1;
+}
+
+.icon {
+    color: #fff;
+    font-size: 33px;
+}
+
+.modal__left,
+.modal__right,
+.modal__close {
+    position: absolute;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    border: none;
+} 
+
+.modal__close {
+    right: 22px;
+    top: 22px;
+}
+
+.modal__left {
+    left: 12px;
+}
+
+.modal__right {
+    right: 12px;
+}
+
+
+.modal__img {
+    width: 904px;
+    height: 430px;
+}
+
+.modal__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

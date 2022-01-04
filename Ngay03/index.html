@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="btn open-modal">Open Modal</div>
+
+        <div class="modal">
+            <div class="notify">
+                <div class="header">
+                    <p>Welcome to Nodemy</p>
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="body">
+                    <h2 class="title">Modal</h2>
+                    <p class="description">Đây là phần body của modal</p>
+                    <div class="group-btn">
+                        <button class="btn">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
+        const close = $('.header i');
+        const closeBtn = $('.group-btn .btn');
+        const openModalBtn = $('.open-modal.btn');
+        const modal = $('.modal');
+        const notify = modal.querySelector('.notify');
+
+        openModalBtn.onclick = () => {
+            modal.classList.add('active');
+            setTimeout(() => notify.classList.add('active'), 0);
+        }
+
+        function closeModal(e) {
+            modal.classList.remove('active');
+            setTimeout(() => notify.classList.remove('active'), 0);
+            e.stopPropagation();
+        }
+
+        close.onclick = closeModal;
+        closeBtn.onclick = closeModal;
+        notify.onclick = e => e.stopPropagation();
+        modal.onclick = closeModal;
+    </script>
+</body>
+
+</html>
