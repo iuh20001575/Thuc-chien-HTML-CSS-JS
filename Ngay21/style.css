@@ -1,0 +1,122 @@
+:root {
+    --height-navbar: 76px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    --primary-color: #0a6cf1;
+    --background-color: #eee;
+    --background-text-color: #dadada;
+    --text-color: #333333;
+    --background-checkbox-color: #aaa;
+
+    font-family: sans-serif;
+    background-color: var(--background-color);
+}
+
+body.dark {
+    --primary-color: #4daf54;
+    --background-color: #2d2c2d;
+    --background-text-color: #3b3a3b;
+    --text-color: #fff;
+    --background-checkbox-color: #4daf54;
+}
+
+.navbar {
+    padding: 0 50px;
+    height: var(--height-navbar);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h4 {
+    font-size: 32px;
+    color: var(--primary-color);
+}
+
+.toggle {
+    margin-top: 4px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    background-color: var(--background-checkbox-color);
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.switch:after {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 26px;
+    background-color: #fff;
+    top: 2px;
+    left: 0;
+    transition: all 0.3s;
+}
+
+input[type="checkbox"]:checked + .switch:after {
+    left: calc(100% - 28px);
+}
+
+input[type="checkbox"]:checked + .switch {
+    background-color: var(--background-checkbox-color);
+}
+
+.offscreen {
+    position: absolute;
+    left: -9999px;
+}
+
+.content {
+    height: calc(100vh - var(--height-navbar));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 55px;
+}
+
+.content .title {
+    font-size: 50px;
+    color: var(--primary-color)
+}
+
+.content .info {
+    background-color: var(--background-text-color);
+    padding: 40px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.content .info p {
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.connect {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: var(--primary-color);
+    padding: 12px 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    display: block;
+}

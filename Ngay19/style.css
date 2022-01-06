@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input.btn::-webkit-outer-spin-button,
+input.btn::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input.btn[type=number] {
+    -moz-appearance: textfield;
+}
+
+.tools {
+    height: 58px;
+    width: 100%;
+    background-color: #4682b4;
+    display: flex;
+    justify-content: space-between;
+}
+
+.draw {
+    border: 1px solid #000;
+    margin: auto;
+    display: block;
+}
+
+.btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin: 0 10px;
+    outline: none;
+    border: unset;
+    text-align: center;
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+}
+
+.btn.color {
+    padding: 3px 5px;
+}
+
+input.btn {
+    font-size: 20px;
+}
+
+.tools__left,
+.tools__right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}

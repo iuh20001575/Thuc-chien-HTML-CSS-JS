@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main class="main">
+        <nav class="navbar">
+            <h4>Nodemy</h4>
+            <div class="toggle">
+                <input type="checkbox" id="toggle" class="offscreen" />
+                <label for="toggle" class="switch"></label>
+            </div>
+        </nav>
+        <div class="content">
+            <h2 class="title">Light/Dark Mode</h2>
+            <div class="info">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quis quos minima ullam aliquam veritatis ad animi quisquam ipsum voluptatem voluptatibus incidunt delectus fuga explicabo, soluta illum est ab. Perferendis? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo obcaecati quae iusto optio nam eum error, voluptatibus molestiae nihil quo rem dolorem explicabo temporibus veritatis assumenda porro, atque suscipit. Amet!</p>
+                <div class="connect">
+                    <a href="#" class="btn">Nodemy</a>
+                    <a href="#" class="btn">Youtube</a>
+                    <a href="#" class="btn">Github</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const checkboxBtn = document.getElementById('toggle');
+        const body = document.querySelector('body');
+
+        checkboxBtn.onchange = () => {
+            body.classList.toggle('dark', checkboxBtn.checked)
+        }
+    </script>
+</body>
+</html>

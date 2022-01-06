@@ -1,28 +1,19 @@
-const itemSlider3 = $('.slider-3 .item');
-const itemSlider2 = $('.slider-2 .item');
-const itemSlider1 = $('.slider-1 .item *');
+const scroll = Array.from($('.scroll'));
+const vHeight = (window.innerHeight || document.documentElement.clientHeight);
 
+const checkShowOnScroll = (element) => {
+    const { top, bottom } = element.getBoundingClientRect();
 
-
-const handleScroll = () => {
-    const scrollY = window.scrollY;
-
-    if (scrollY >= 970)
-        itemSlider3.addClass('start');
-    if (scrollY < 820)
-        itemSlider3.removeClass('start');
-
-    if (scrollY >= 250 && scrollY <= 1000)
-        itemSlider2.addClass('start');
-    else
-        itemSlider2.removeClass('start');
-
-    if (scrollY <= 400)
-        itemSlider1.addClass('start');
-    else
-        itemSlider1.removeClass('start');
+    return (
+        (top >= 0 || bottom >= 0) &&
+        top <= vHeight
+    );
 }
 
-window.addEventListener('scroll', handleScroll);
+const handleScroll = () => {
+    scroll.forEach(element => 
+        element.classList.toggle('start', checkShowOnScroll(element)))
+}
 
 handleScroll();
+window.onscroll = handleScroll;

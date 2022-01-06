@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="tools">
+        <div class="tools__left">
+            <input type="color" name="" id="" class="btn color">
+            <div class="btn eraser">
+                <i class="fas fa-eraser"></i>
+            </div>
+            <div class="btn dec">
+                <i class="fas fa-minus"></i>
+            </div>
+            <input type="number" value="5" min="1" max="20" class="btn size">
+            <div class="btn inc">
+                <i class="fas fa-plus"></i>
+            </div>
+        </div>
+        
+        <div class="tools__right">
+            <a class="btn save" href="" download="image">
+                <i class="fas fa-save"></i>
+            </a>
+            <div class="btn close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </div>
+    <canvas class="draw" width="1200" height="600"></canvas>
+
+    <script src="./app.js"></script>
+</body>
+</html>
