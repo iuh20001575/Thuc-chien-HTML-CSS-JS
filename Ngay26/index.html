@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <form action="" class="form">
+        <div style="display: flex;">
+            <div class="password">
+                <input type="password" name="password" id="password">
+                <div class="show-password show">
+                    <i class="show-icon fas fa-eye"></i>
+                    <i class="hide-icon fas fa-eye-slash"></i>
+                </div>
+            </div>
+            <button disabled class="submit">Submit</button>
+        </div>
+        <div class="validator">
+            <li class="item-validator">
+                <div class="icon">
+                    <i class="times fas fa-times"></i>
+                    <i class="check fas fa-check"></i>
+                </div>
+                <div class="info">
+                    Lower-case
+                </div>
+            </li>
+            <li class="item-validator">
+                <div class="icon">
+                    <i class="times fas fa-times"></i>
+                    <i class="check fas fa-check"></i>
+                </div>
+                <div class="info">
+                    Upper-case
+                </div>
+            </li>
+            <li class="item-validator">
+                <div class="icon">
+                    <i class="times fas fa-times"></i>
+                    <i class="check fas fa-check"></i>
+                </div>
+                <div class="info">
+                    Number
+                </div>
+            </li>
+            <li class="item-validator">
+                <div class="icon">
+                    <i class="times fas fa-times"></i>
+                    <i class="check fas fa-check"></i>
+                </div>
+                <div class="info">
+                    At least one special symbol
+                </div>
+            </li>
+            <li class="item-validator">
+                <div class="icon">
+                    <i class="times fas fa-times"></i>
+                    <i class="check fas fa-check"></i>
+                </div>
+                <div class="info">
+                    At least 8 characters
+                </div>
+            </li>
+        </div>
+    </form>
+    
+    <script src="./app.js"></script>
+</body>
+</html>

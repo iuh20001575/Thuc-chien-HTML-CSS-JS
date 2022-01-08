@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+}
+
+.container {
+    display: grid;
+    gap: 4px;
+}
+
+.item {
+    background-color: #1d1d1d;
+    transition: 2s ease;
+}
+
+.item:hover {
+    transition: 0s;
+}
