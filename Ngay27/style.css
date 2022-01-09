@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dadada;
+}
+
+.social {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    position: relative;
+}
+
+.info {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 50px;
+    font-weight: 500;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+    pointer-events: none;
+}
+
+.social:hover .info {
+    opacity: 1;
+    visibility: visible;
+    top: calc(-100% - 10px);
+    transform: translateY(0);
+}
+
+.info::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    border: 9px solid;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.facebook.social .info::before {
+    border-top-color: #3b5999;
+}
+
+.github.social .info::before {
+    border-top-color: #333333;
+}
+
+.twitter.social .info::before {
+    border-top-color: #46c1f6;
+}
+
+.instagram.social .info::before {
+    border-top-color: #e1306c;
+}
+
+.youtube.social .info::before {
+    border-top-color: #de463b;
+}
+
+
+.social:hover {
+    color: #fff;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.facebook.social .info,
+.facebook.social:hover {
+    background-color: #3b5999;
+}
+
+.github.social .info,
+.github.social:hover {
+    background-color: #333333;
+}
+
+.twitter.social .info,
+.twitter.social:hover {
+    background-color: #46c1f6;
+}
+
+.instagram.social .info,
+.instagram.social:hover {
+    background-color: #e1306c;
+}
+
+.youtube.social .info,
+.youtube.social:hover {
+    background-color: #de463b;
+}
